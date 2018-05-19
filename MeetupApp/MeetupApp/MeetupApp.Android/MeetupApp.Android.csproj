@@ -79,6 +79,8 @@
     <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher.png" />
     <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\Backgroundmdpi.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\MobileDev.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -92,7 +94,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MeetupApp\MeetupApp.csproj">
-      <Project>{A682884C-CB44-4A89-B752-27BB634E0ABE}</Project>
+      <Project>{9D5EB0F3-A4D1-4BCC-AEBE-F03C592F86C9}</Project>
       <Name>MeetupApp</Name>
     </ProjectReference>
   </ItemGroup>

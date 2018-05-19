@@ -9,4 +9,7 @@
     <PackageReference Include="Prism.Autofac.Forms" Version="7.0.0.396" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Styles\" />
+  </ItemGroup>
 </Project>

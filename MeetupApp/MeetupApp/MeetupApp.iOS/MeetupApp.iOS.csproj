@@ -181,6 +181,8 @@
     <BundleResource Include="Resources\Default.png" />
     <BundleResource Include="Resources\Default@2x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <BundleResource Include="Resources\Backgroundmdpi.png" />
+    <BundleResource Include="Resources\MobileDev.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -194,7 +196,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MeetupApp\MeetupApp.csproj">
-      <Project>{A682884C-CB44-4A89-B752-27BB634E0ABE}</Project>
+      <Project>{9D5EB0F3-A4D1-4BCC-AEBE-F03C592F86C9}</Project>
       <Name>MeetupApp</Name>
     </ProjectReference>
   </ItemGroup>

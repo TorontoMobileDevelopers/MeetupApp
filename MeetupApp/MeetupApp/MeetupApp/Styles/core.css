@@ -1,0 +1,19 @@
+view  {
+    margin: 10;
+}
+
+^contentpage {
+    /*background-color: #7fdbb6;*/
+    background-image: Backgroundmdpi.png;
+    margin: 20;
+}
+
+.h1 {
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-weight: bolder;
+    font-size: 36;
+    color: white;
+}
+
+/* dark pink diagonal stripe #e0288d */
+/* light pink diagonal stripe #e43f96 */
