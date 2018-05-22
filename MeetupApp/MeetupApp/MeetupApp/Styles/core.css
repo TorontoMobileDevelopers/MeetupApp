@@ -3,16 +3,35 @@ view  {
 }
 
 ^contentpage {
-    /*background-color: #7fdbb6;*/
+    background-color: #33333c;
     background-image: Backgroundmdpi.png;
     margin: 20;
 }
 
 .h1 {
-    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-    font-weight: bolder;
-    font-size: 36;
+    /*font-family: "Century Gothic", CenturyGothic, Futura, Futura-Medium, AppleGothic, sans-serif;*/
+    font-family: Futura-Medium;
+    font-weight: 900;
+    font-size: 22;
     color: white;
+}
+
+.striped {
+    background-image: Backgroundmdpi.png;
+}
+
+.frame {
+    margin: 20;
+    background-color: transparent;
+    border-width: 20;
+}
+
+.content {
+    background-color: white;
+}
+
+.border-box {
+    background-color: #33333c;
 }
 
 /* dark pink diagonal stripe #e0288d */

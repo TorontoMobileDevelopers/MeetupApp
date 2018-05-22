@@ -4,9 +4,38 @@
              xmlns:local="clr-namespace:MeetupApp.Views"
              x:Class="MeetupApp.Views.MainPage">
 
-    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-        <Image Source="MobileDev.png" Scale="0.5" />
-        <Label Text="Toronto Mobile .NET Developers" class="h1" HorizontalTextAlignment="Center" />
-    </StackLayout>
+    <local:BasePage.Resources>
 
+        <!-- Application resource dictionary -->
+        <StyleSheet Source="Styles/core.css" />
+    </local:BasePage.Resources>
+    <Grid ColumnSpacing="0" RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="12*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <BoxView Grid.Row="0" Grid.ColumnSpan="3" class="border-box"/>
+        <BoxView Grid.Row="2" Grid.ColumnSpan="3" class="border-box"/>
+        <BoxView Grid.Column="0" Grid.Row="1" class="border-box"/>
+        <BoxView Grid.Column="2" Grid.Row="1" class="border-box"/>
+        <StackLayout Orientation="Horizontal" 
+                     Grid.Row="1" Grid.Column="1"
+                     Margin="20">
+            <Image Source="MobileDev.png" Scale="0.8" VerticalOptions="Center"/>
+            <Label Text="Toronto Mobile .NET Developers" class="h1"
+                   VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+        <ScrollView Grid.Row="3" Grid.ColumnSpan="3">
+            <StackLayout class="content">
+                <Label Text="stuff"/>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
 </local:BasePage>
