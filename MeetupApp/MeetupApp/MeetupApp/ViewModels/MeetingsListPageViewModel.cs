@@ -4,7 +4,7 @@ using MeetupApp.Commands;
 
 namespace MeetupApp.ViewModels
 {
-    public class MeetingsListPageViewModel : ViewModelBase, INavigationAware
+    public class MeetingsListPageViewModel : ViewModelBase
     {
         private ICommand _loadEventsCommand;
         public ICommand RefreshCommand => _loadEventsCommand;
@@ -16,7 +16,7 @@ namespace MeetupApp.ViewModels
             _loadEventsCommand = loadEventsCommand;
         }
 
-		public override void OnNavigatingTo(NavigationParameters parameters)
+        public override void OnNavigatingTo(INavigationParameters parameters)
         {
             _loadEventsCommand.Execute(null);
         }
