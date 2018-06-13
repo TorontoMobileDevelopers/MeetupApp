@@ -3,12 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:MeetupApp.Views"
              x:Class="MeetupApp.Views.MainPage">
-
-    <local:BasePage.Resources>
-
-        <!-- Application resource dictionary -->
-        <StyleSheet Source="Styles/core.css" />
-    </local:BasePage.Resources>
     <Grid ColumnSpacing="0" RowSpacing="0">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -32,10 +26,19 @@
             <Label Text="Toronto Mobile .NET Developers" class="h1"
                    VerticalOptions="CenterAndExpand"/>
         </StackLayout>
-        <ScrollView Grid.Row="3" Grid.ColumnSpan="3">
-            <StackLayout class="content">
-                <Label Text="stuff"/>
-            </StackLayout>
-        </ScrollView>
+        <ListView Grid.Row="3" Grid.ColumnSpan="3" class="content"
+                   ItemsSource="{Binding RefreshCommand.EventList}"
+                  IsPullToRefreshEnabled="True"
+                  RefreshCommand="{Binding RefreshCommand}"
+                  IsRefreshing="{Binding RefreshCommand.IsRefreshing}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <!--<ViewCell>
+                        <Label Text="{Binding Title}"/>
+                    </ViewCell>-->
+                    <TextCell Text="{Binding Title}" /><!-- Detail="{Binding Description}" />-->
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </local:BasePage>

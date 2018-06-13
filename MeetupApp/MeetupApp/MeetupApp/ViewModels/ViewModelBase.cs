@@ -1,9 +1,5 @@
-﻿using Prism.Commands;
-using Prism.Mvvm;
+﻿using Prism.Mvvm;
 using Prism.Navigation;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace MeetupApp.ViewModels
 {
@@ -23,24 +19,12 @@ namespace MeetupApp.ViewModels
             NavigationService = navigationService;
         }
 
-        public virtual void OnNavigatedFrom(NavigationParameters parameters)
-        {
-            
-        }
+        public virtual void OnNavigatedFrom(NavigationParameters parameters) {}
 
-        public virtual void OnNavigatedTo(NavigationParameters parameters)
-        {
-            
-        }
+        public virtual void OnNavigatedTo(NavigationParameters parameters) {}
 
-        public virtual void OnNavigatingTo(NavigationParameters parameters)
-        {
-            
-        }
+        public virtual void OnNavigatingTo(NavigationParameters parameters) {}
 
-        public virtual void Destroy()
-        {
-            
-        }
+        public virtual void Destroy() {}
     }
 }

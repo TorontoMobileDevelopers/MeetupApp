@@ -5,6 +5,8 @@ using MeetupApp.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Prism.Autofac;
+using MeetupApp.Commands;
+using MeetupApp.Services;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace MeetupApp
@@ -31,6 +33,10 @@ namespace MeetupApp
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage>();
+
+            containerRegistry.RegisterSingleton<IErrorManagementService, ErrorManagementService>();
+
+            containerRegistry.Register<ILoadEventsCommand, LoadEventsCommand>();
         }
     }
 }

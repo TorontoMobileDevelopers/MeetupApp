@@ -6,6 +6,5 @@
 	<Application.Resources>
 
 		<!-- Application resource dictionary -->
-        <StyleSheet Source="Styles/core.css" />
 	</Application.Resources>
 </prism:PrismApplication>

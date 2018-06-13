@@ -1,19 +1,25 @@
-﻿using Prism.Commands;
-using Prism.Mvvm;
-using Prism.Navigation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Prism.Navigation;
+using System.Windows.Input;
+using MeetupApp.Commands;
+using MeetupApp.Services;
 
 namespace MeetupApp.ViewModels
 {
-    public class MainPageViewModel : ViewModelBase
+	public class MainPageViewModel : ViewModelBase, INavigationAware
     {
-        public MainPageViewModel(INavigationService navigationService) 
+        private ICommand _loadEventsCommand;
+        public ICommand RefreshCommand => _loadEventsCommand;
+
+        public MainPageViewModel(INavigationService navigationService, ILoadEventsCommand loadEventsCommand)
             : base (navigationService)
         {
             Title = "Main Page";
+            _loadEventsCommand = loadEventsCommand;
         }
-    }
+
+		public override void OnNavigatingTo(NavigationParameters parameters)
+        {
+            _loadEventsCommand.Execute(null);
+        }
+	}
 }
