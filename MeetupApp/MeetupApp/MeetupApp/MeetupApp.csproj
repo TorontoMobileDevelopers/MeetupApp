@@ -21,4 +21,7 @@
   <ItemGroup>
     <Compile Remove="MainPage.xaml.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Views\MyPage.cs" />
+  </ItemGroup>
 </Project>
