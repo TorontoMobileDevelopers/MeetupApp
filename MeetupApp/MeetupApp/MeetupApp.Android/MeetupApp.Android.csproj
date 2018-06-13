@@ -81,6 +81,8 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher.png" />
     <AndroidResource Include="Resources\mipmap-mdpi\Backgroundmdpi.png" />
     <AndroidResource Include="Resources\mipmap-mdpi\MobileDev.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\Backgroundmdpi.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\MobileDev.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />

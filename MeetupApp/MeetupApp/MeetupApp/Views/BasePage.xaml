@@ -3,6 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="MeetupApp.Views.BasePage"
              Title="{Binding Title}">
+    <ContentPage.Resources>
+        <StyleSheet Source="/Styles/core.css" />
+    </ContentPage.Resources>
     <ContentPage.Content>
     </ContentPage.Content>
 </ContentPage>
