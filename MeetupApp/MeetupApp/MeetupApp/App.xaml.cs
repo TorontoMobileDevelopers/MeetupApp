@@ -33,6 +33,7 @@ namespace MeetupApp
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage>();
+            containerRegistry.RegisterForNavigation<MeetingsListPage>();
 
             containerRegistry.RegisterSingleton<IErrorManagementService, ErrorManagementService>();
 
