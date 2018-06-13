@@ -4,7 +4,7 @@
              x:Class="MeetupApp.Views.BasePage"
              Title="{Binding Title}">
     <ContentPage.Resources>
-        <StyleSheet Source="../Styles/Core.css" />
+        <StyleSheet Source="/Styles/Core.css" />
     </ContentPage.Resources>
     <ContentPage.Content>
     </ContentPage.Content>
