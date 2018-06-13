@@ -1,11 +1,6 @@
-view  {
-    margin: 10;
-}
-
 ^ContentPage {
     background-color: #33333c;
     background-image: Backgroundmdpi.png;
-    margin: 20;
 }
 
 .h1 {

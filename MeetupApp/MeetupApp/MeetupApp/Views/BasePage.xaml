@@ -6,6 +6,4 @@
     <ContentPage.Resources>
         <StyleSheet Source="/Styles/core.css" />
     </ContentPage.Resources>
-    <ContentPage.Content>
-    </ContentPage.Content>
 </ContentPage>

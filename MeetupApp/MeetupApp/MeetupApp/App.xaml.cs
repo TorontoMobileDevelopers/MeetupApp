@@ -1,6 +1,5 @@
 ﻿using Prism;
 using Prism.Ioc;
-using MeetupApp.ViewModels;
 using MeetupApp.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -26,7 +25,7 @@ namespace MeetupApp
         {
             InitializeComponent();
 
-            await NavigationService.NavigateAsync("NavigationPage/MainPage");
+            await NavigationService.NavigateAsync("MainPage");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
@@ -34,6 +33,7 @@ namespace MeetupApp
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage>();
             containerRegistry.RegisterForNavigation<MeetingsListPage>();
+            containerRegistry.RegisterForNavigation<AboutPage>();
 
             containerRegistry.RegisterSingleton<IErrorManagementService, ErrorManagementService>();
 
