@@ -12,4 +12,7 @@
   <ItemGroup>
     <Folder Include="Styles\" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Views\MyPage.cs" />
+  </ItemGroup>
 </Project>

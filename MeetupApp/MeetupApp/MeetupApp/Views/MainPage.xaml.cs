@@ -7,7 +7,7 @@ using Xamarin.Forms;
 
 namespace MeetupApp.Views
 {
-	public partial class MainPage : BasePage
+    public partial class MainPage : TabbedPage
 	{
 		public MainPage ()
 		{
