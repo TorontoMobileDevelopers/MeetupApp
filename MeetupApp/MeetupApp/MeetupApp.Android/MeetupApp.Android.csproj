@@ -56,9 +56,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms">
-      <Version>3.1.0.561732-pre4</Version>
-    </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.Design">
       <Version>27.0.2.1</Version>
     </PackageReference>
@@ -74,8 +71,11 @@
     <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter">
       <Version>27.0.2.1</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.Forms">
+      <Version>3.1.0.583944</Version>
+    </PackageReference>
     <PackageReference Include="Prism.Autofac.Forms">
-      <Version>7.1.0.151-ci</Version>
+      <Version>7.1.0.172-pre</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -93,10 +93,8 @@
     <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher.png" />
     <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher.png" />
-    <AndroidResource Include="Resources\mipmap-mdpi\Backgroundmdpi.png" />
-    <AndroidResource Include="Resources\mipmap-mdpi\MobileDev.png" />
-    <AndroidResource Include="Resources\mipmap-hdpi\Backgroundmdpi.png" />
-    <AndroidResource Include="Resources\mipmap-hdpi\MobileDev.png" />
+    <AndroidResource Include="Resources\drawable\Background.png" />
+    <AndroidResource Include="Resources\drawable\MobileDev.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -113,6 +111,9 @@
       <Project>{9D5EB0F3-A4D1-4BCC-AEBE-F03C592F86C9}</Project>
       <Name>MeetupApp</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

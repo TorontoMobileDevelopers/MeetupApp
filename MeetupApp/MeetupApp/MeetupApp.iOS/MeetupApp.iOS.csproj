@@ -181,7 +181,7 @@
     <BundleResource Include="Resources\Default.png" />
     <BundleResource Include="Resources\Default@2x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
-    <BundleResource Include="Resources\Backgroundmdpi.png" />
+    <BundleResource Include="Resources\Background.png" />
     <BundleResource Include="Resources\MobileDev.png" />
   </ItemGroup>
   <ItemGroup>
@@ -192,10 +192,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms">
-      <Version>3.1.0.561732-pre4</Version>
+      <Version>3.1.0.583944</Version>
     </PackageReference>
     <PackageReference Include="Prism.Autofac.Forms">
-      <Version>7.1.0.151-ci</Version>
+      <Version>7.1.0.172-pre</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
