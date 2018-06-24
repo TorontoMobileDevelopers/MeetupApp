@@ -1,6 +1,6 @@
 ^ContentPage {
     background-color: #33333c;
-    background-image: Backgroundmdpi.png;
+    background-image: Background.png;
 }
 
 .h1 {
@@ -12,7 +12,7 @@
 }
 
 .striped {
-    background-image: Backgroundmdpi.png;
+    background-image: Background.png;
 }
 
 .frame {

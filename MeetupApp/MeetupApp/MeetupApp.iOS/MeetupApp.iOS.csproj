@@ -181,7 +181,7 @@
     <BundleResource Include="Resources\Default.png" />
     <BundleResource Include="Resources\Default@2x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
-    <BundleResource Include="Resources\Backgroundmdpi.png" />
+    <BundleResource Include="Resources\Background.png" />
     <BundleResource Include="Resources\MobileDev.png" />
   </ItemGroup>
   <ItemGroup>
