@@ -8,7 +8,10 @@ using System.Xml.Linq;
 using HttpTracer;
 using MeetupApp.Models;
 using MeetupApp.Services;
+using MonkeyCache;
+using MonkeyCache.SQLite;
 using MvvmHelpers;
+using Xamarin.Essentials;
 
 namespace MeetupApp.Commands
 {
@@ -31,16 +34,35 @@ namespace MeetupApp.Commands
 
         public async Task LoadEventsFeed()
         {
-            IsRefreshing = true;
-            const string url = "https://www.meetup.com/TorontoMobileDevelopers/events/rss/";
-            //using (var client = new HttpClient())//new HttpTracerHandler()))
-            using (var client = new HttpClient())
+            try
             {
-                var result = await client.GetStringAsync(url).ConfigureAwait(false);
-                var events = await ParseFeed(result);
+                const string url = "https://www.meetup.com/TorontoMobileDevelopers/events/rss/";
+                IsRefreshing = true;
+
+                string result;
+                List<RssFeedItem> events;
+
+                if (Connectivity.NetworkAccess == NetworkAccess.Internet)
+                {
+                    //using (var client = new HttpClient())//new HttpTracerHandler()))
+                    using (var client = new HttpClient())
+                    {
+                        result = await client.GetStringAsync(url).ConfigureAwait(false);
+                        events = await ParseFeed(result);
+                        Barrel.Current.Add(url, events, TimeSpan.FromDays(1));
+                    }
+                }
+                else
+                {
+                    events = Barrel.Current.Get<List<RssFeedItem>>(url);
+                }
+
                 EventList.ReplaceRange(events);
             }
-            IsRefreshing = false;
+            finally
+            {
+                IsRefreshing = false;
+            }
         }
 
         private async Task<List<RssFeedItem>> ParseFeed(string rss)

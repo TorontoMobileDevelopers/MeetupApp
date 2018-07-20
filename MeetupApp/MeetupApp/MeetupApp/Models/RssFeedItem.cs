@@ -41,6 +41,8 @@ namespace MeetupApp.Models
                 if (!string.IsNullOrWhiteSpace(caption))
                     return caption;
 
+                if (string.IsNullOrWhiteSpace(Description)) return string.Empty;
+
                 //get rid of HTML tags
                 caption = Regex.Replace(Description, "<[^>]*>", string.Empty);
 

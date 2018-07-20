@@ -1,5 +1,9 @@
-﻿using Prism.Mvvm;
+﻿using System;
+using Prism.Mvvm;
 using Prism.Navigation;
+using Xamarin.Forms;
+using System.Windows.Input;
+using Prism.Commands;
 
 namespace MeetupApp.ViewModels
 {
@@ -18,6 +22,8 @@ namespace MeetupApp.ViewModels
         {
             NavigationService = navigationService;
         }
+
+        public ICommand NavigateToWebUrlCommand => new DelegateCommand<string>(url => Device.OpenUri(new Uri(url)));
 
         public virtual void OnNavigatedFrom(INavigationParameters parameters) {}
 
