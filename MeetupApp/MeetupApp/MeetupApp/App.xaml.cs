@@ -6,6 +6,8 @@ using Xamarin.Forms.Xaml;
 using Prism.Autofac;
 using MeetupApp.Commands;
 using MeetupApp.Services;
+using MonkeyCache.SQLite;
+using Xamarin.Essentials;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace MeetupApp
@@ -24,7 +26,7 @@ namespace MeetupApp
         protected override async void OnInitialized()
         {
             InitializeComponent();
-
+            Barrel.ApplicationId = AppInfo.PackageName;
             await NavigationService.NavigateAsync("MainPage");
         }
 
