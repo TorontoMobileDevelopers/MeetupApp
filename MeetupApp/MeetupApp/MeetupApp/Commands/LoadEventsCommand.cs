@@ -57,7 +57,8 @@ namespace MeetupApp.Commands
                     events = Barrel.Current.Get<List<RssFeedItem>>(url);
                 }
 
-                EventList.ReplaceRange(events);
+                if (events != null && events.Any())
+                    EventList.ReplaceRange(events);
             }
             finally
             {
