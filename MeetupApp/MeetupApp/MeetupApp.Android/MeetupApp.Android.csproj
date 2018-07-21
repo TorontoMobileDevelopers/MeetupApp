@@ -99,9 +99,10 @@
     <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher.png" />
     <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher.png" />
-    <AndroidResource Include="Resources\drawable\Background.png" />
+    <AndroidResource Include="Resources\drawable\diagonalstripes.png" />
     <AndroidResource Include="Resources\drawable\MobileDev.png" />
     <AndroidResource Include="Resources\drawable\bsilabs.png" />
+    <AndroidResource Include="Resources\drawable\Background.xml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
