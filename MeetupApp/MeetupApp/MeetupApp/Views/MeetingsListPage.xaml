@@ -36,7 +36,7 @@
                     <!--<ViewCell>
                         <Label Text="{Binding Title}"/>
                     </ViewCell>-->
-                    <TextCell Text="{Binding Title}" /><!-- Detail="{Binding Description}" />-->
+                    <TextCell Text="{Binding Title}" TextColor="White" /><!-- Detail="{Binding Description}" />-->
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

@@ -77,6 +77,12 @@
     <PackageReference Include="Prism.Autofac.Forms">
       <Version>7.1.0.172-pre</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.Essentials">
+      <Version>0.8.0-preview</Version>
+    </PackageReference>
+    <PackageReference Include="MonkeyCache.SQLite">
+      <Version>0.1.0.10-beta</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -93,8 +99,10 @@
     <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher.png" />
     <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher.png" />
-    <AndroidResource Include="Resources\drawable\Background.png" />
+    <AndroidResource Include="Resources\drawable\diagonalstripes.png" />
     <AndroidResource Include="Resources\drawable\MobileDev.png" />
+    <AndroidResource Include="Resources\drawable\bsilabs.png" />
+    <AndroidResource Include="Resources\drawable\Background.xml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />

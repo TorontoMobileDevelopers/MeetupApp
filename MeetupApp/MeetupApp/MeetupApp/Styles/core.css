@@ -11,6 +11,12 @@
     color: white;
 }
 
+.h2 {
+    font-family: Futura-Medium;
+    font-weight: 900;
+    font-size: 18;
+}
+
 .striped {
     background-image: Background.png;
 }
@@ -22,11 +28,24 @@
 }
 
 .content {
-    background-color: white;
+    background-color: #33333c;
+    color: white;
 }
 
 .border-box {
     background-color: #33333c;
+}
+
+.social {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20 0;
+}
+
+.social-icon {
+    margin: 5;
+    height: 100;
+    width: 90;
 }
 
 /* dark pink diagonal stripe #e0288d */
