@@ -2,43 +2,24 @@
 <local:BasePage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:MeetupApp.Views"
+             xmlns:templates="clr-namespace:MeetupApp.Templates"
              x:Class="MeetupApp.Views.MeetingsListPage">
-    <Grid ColumnSpacing="0" RowSpacing="0">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="3*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="12*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="10*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <BoxView Grid.Row="0" Grid.ColumnSpan="3" class="border-box"/>
-        <BoxView Grid.Row="2" Grid.ColumnSpan="3" class="border-box"/>
-        <BoxView Grid.Column="0" Grid.Row="1" class="border-box"/>
-        <BoxView Grid.Column="2" Grid.Row="1" class="border-box"/>
-        <StackLayout Orientation="Horizontal" 
-                     Grid.Row="1" Grid.Column="1"
-                     Margin="20">
-            <Image Source="MobileDev.png" Scale="0.8" VerticalOptions="Center"/>
-            <Label Text="Toronto Mobile .NET Developers" class="h1"
-                   VerticalOptions="CenterAndExpand"/>
+    <templates:ContentWithHeader>
+        <StackLayout class="content">
+            <Label Text="Upcoming Meetings" Margin="20" class="h2"/>
+            <ListView ItemsSource="{Binding RefreshCommand.EventList}"
+                      IsPullToRefreshEnabled="True"
+                      RefreshCommand="{Binding RefreshCommand}"
+                      IsRefreshing="{Binding RefreshCommand.IsRefreshing}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <!--<ViewCell>
+                            <Label Text="{Binding Title}"/>
+                        </ViewCell>-->
+                        <TextCell Text="{Binding Title}" TextColor="White" /><!-- Detail="{Binding Description}" />-->
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
-        <ListView Grid.Row="3" Grid.ColumnSpan="3" class="content"
-                   ItemsSource="{Binding RefreshCommand.EventList}"
-                  IsPullToRefreshEnabled="True"
-                  RefreshCommand="{Binding RefreshCommand}"
-                  IsRefreshing="{Binding RefreshCommand.IsRefreshing}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <!--<ViewCell>
-                        <Label Text="{Binding Title}"/>
-                    </ViewCell>-->
-                    <TextCell Text="{Binding Title}" TextColor="White" /><!-- Detail="{Binding Description}" />-->
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </Grid>
+    </templates:ContentWithHeader>
 </local:BasePage>

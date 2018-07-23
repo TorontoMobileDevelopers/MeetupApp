@@ -11,6 +11,11 @@
                 <local:MeetingsListPage />
             </x:Arguments>
         </NavigationPage>
+        <NavigationPage Title="Connect">
+            <x:Arguments>
+                <local:ConnectPage />
+            </x:Arguments>
+        </NavigationPage>
         <NavigationPage Title="About">
             <x:Arguments>
                 <local:AboutPage />
