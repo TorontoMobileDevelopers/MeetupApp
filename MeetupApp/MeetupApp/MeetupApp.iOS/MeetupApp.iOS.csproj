@@ -26,6 +26,7 @@
     <MtouchArch>i386, x86_64</MtouchArch>
     <MtouchLink>SdkOnly</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
+    <LangVersion>Latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -36,6 +37,7 @@
     <MtouchLink>None</MtouchLink>
     <MtouchArch>i386, x86_64</MtouchArch>
     <ConsolePause>false</ConsolePause>
+    <LangVersion>Latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -50,6 +52,7 @@
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <LangVersion>Latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -61,6 +64,8 @@
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignProvision></CodesignProvision>
+    <LangVersion>Latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
     <DebugType>none</DebugType>
@@ -74,6 +79,7 @@
     <CodesignProvision>Automatic:AdHoc</CodesignProvision>
     <CodesignKey>iPhone Distribution</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <LangVersion>Latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
     <DebugType>none</DebugType>
@@ -86,6 +92,7 @@
     <CodesignProvision>Automatic:AppStore</CodesignProvision>
     <CodesignKey>iPhone Distribution</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <LangVersion>Latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -162,9 +169,6 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms">
-      <Version>3.1.0.583944</Version>
-    </PackageReference>
     <PackageReference Include="Prism.Autofac.Forms">
       <Version>7.1.0.172-pre</Version>
     </PackageReference>
@@ -173,6 +177,9 @@
     </PackageReference>
     <PackageReference Include="MonkeyCache.SQLite">
       <Version>0.1.0.10-beta</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms">
+      <Version>3.3.0.685826-nightly</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

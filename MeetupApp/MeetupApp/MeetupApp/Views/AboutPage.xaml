@@ -2,56 +2,26 @@
 <local:BasePage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:local="clr-namespace:MeetupApp.Views"
-             xmlns:prism="clr-namespace:Prism.Navigation.Xaml;assembly=Prism.Forms"
+             xmlns:templates="clr-namespace:MeetupApp.Templates"
              x:Class="MeetupApp.Views.AboutPage">
-    <Grid ColumnSpacing="0" RowSpacing="0">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="3*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="12*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="10*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <BoxView Grid.Row="0" Grid.ColumnSpan="3" class="border-box"/>
-        <BoxView Grid.Row="2" Grid.ColumnSpan="3" class="border-box"/>
-        <BoxView Grid.Column="0" Grid.Row="1" class="border-box"/>
-        <BoxView Grid.Column="2" Grid.Row="1" class="border-box"/>
-        <StackLayout Orientation="Horizontal" 
-                     Grid.Row="1" Grid.Column="1"
-                     Margin="20">
-            <Image Source="MobileDev.png" Scale="0.8" VerticalOptions="Center"/>
-            <Label Text="Toronto Mobile .NET Developers" class="h1"
-                   VerticalOptions="CenterAndExpand"/>
-        </StackLayout>
-        <ScrollView Grid.Row="3" Grid.ColumnSpan="3" class="content">
+    <templates:ContentWithHeader>
+        <ScrollView class="content">
             <StackLayout Margin="20">
-                <Label Text="About" class="h2"/>
+                <Label Text="About Us" class="h2"/>
                 <Label Text="The support you need in the changing world of Xamarin, iOS and Android!" />
                 
                 <Label Text="Sponsored By BSI Labs" class="h2" Margin="0,20,0,0"/>
-                <Image Source="bsilabs" Scale="0.5"/>
-                       
-                <Label Text="Connect" class="h2"/>
-                <Button Text="Github" Command="{Binding NavigateToWebUrlCommand}" CommandParameter="https://github.com/TorontoMobileDevelopers"/>
-                <Button Text="Twitter" Command="{Binding NavigateToWebUrlCommand}" CommandParameter="https://twitter.com/TOMobileDev"/>
-                <Button Text="Facebook" Command="{Binding NavigateToWebUrlCommand}" CommandParameter="https://facebook.com/TorontoMobileDevelopers"/>
-                <Button Text="YouTube" Command="{Binding NavigateToWebUrlCommand}" CommandParameter="https://goo.gl/hTNLhW"/>
-                <Button Text="WhatsApp" Command="{Binding NavigateToWebUrlCommand}" CommandParameter="https://tinyurl.com/TOMobileYouTube"/>
-                <Button Text="Meetup" Command="{Binding NavigateToWebUrlCommand}" CommandParameter="MainPage/TabbedPage/MeetingsListPage"/>
-
-                <FlexLayout class="social">
-                    <Image class="social-icon" Source="MobileDev.png"/>
-                    <Image class="social-icon" Source="MobileDev.png"/>
-                    <Image class="social-icon" Source="MobileDev.png"/>
-                    <Image class="social-icon" Source="MobileDev.png"/>
-                    <Image class="social-icon" Source="MobileDev.png"/>
-                    <Image class="social-icon" Source="MobileDev.png"/>
-                </FlexLayout>
+                <Image Source="bsilabs" Scale="0.5">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding NavigateToWebUrlCommand}" CommandParameter="https://bsilabs.ca"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label Text="Enterprise Mobile Done Right.">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding NavigateToWebUrlCommand}" CommandParameter="https://bsilabs.ca"/>
+                    </Label.GestureRecognizers>
+                </Label>
             </StackLayout>
         </ScrollView>
-    </Grid>
+    </templates:ContentWithHeader>
 </local:BasePage>

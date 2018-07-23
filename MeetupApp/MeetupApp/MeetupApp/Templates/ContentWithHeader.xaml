@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MeetupApp.Templates.ContentWithHeader">
+    <ContentView.ControlTemplate>
+        <ControlTemplate>
+            <Grid ColumnSpacing="0" RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="12*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackLayout Orientation="Horizontal" 
+                     Grid.Row="0" Grid.Column="0"
+                             Margin="20">
+                    <Image Source="MobileDev.png" Scale="0.65" VerticalOptions="Center"/>
+                    <Label Text="Toronto Mobile .NET Developers" class="h1"
+                           VerticalOptions="CenterAndExpand"/>
+                </StackLayout>
+                <ContentPresenter Grid.Row="1" Grid.Column="0"/>
+            </Grid>
+        </ControlTemplate>
+    </ContentView.ControlTemplate>
+</ContentView>
