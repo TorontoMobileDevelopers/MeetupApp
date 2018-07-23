@@ -17,7 +17,7 @@
     <PackageReference Include="Prism.Autofac.Forms" Version="7.1.0.172-pre" />
     <PackageReference Include="Xamarin.Essentials" Version="0.8.0-preview" />
     <PackageReference Include="MonkeyCache.SQLite" Version="0.1.0.10-beta" />
-    <PackageReference Include="Xamarin.Forms" Version="3.3.0.685826-nightly" />
+    <PackageReference Include="Xamarin.Forms" Version="3.2.0.637442-pre1" />
   </ItemGroup>
 
   <ItemGroup>
