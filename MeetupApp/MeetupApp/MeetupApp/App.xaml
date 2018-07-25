@@ -6,5 +6,21 @@
 	<Application.Resources>
 
 		<!-- Application resource dictionary -->
+        <ResourceDictionary>
+            
+            <OnPlatform x:Key="FABrandsFontFamily" x:TypeArguments="x:String">
+                <On Platform="Android" Value="fa-brands-400.ttf#fa-brands-400"/>
+                <On Platform="iOS" Value="fa-brands-400"/>
+                <On Platform="UWP" Value="fa-brands-400.ttf"/>
+            </OnPlatform>
+
+            <Style x:Key="LabelIconStyle" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource FABrandsFontFamily}"/>
+                <Setter Property="FontSize" Value="25"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+            </Style>
+            
+        </ResourceDictionary>
 	</Application.Resources>
 </prism:PrismApplication>

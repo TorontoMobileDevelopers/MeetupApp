@@ -2,6 +2,7 @@
 <local:BasePage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:local="clr-namespace:MeetupApp.Views"
+             xmlns:fonts="clr-namespace:MeetupApp.Fonts"
              xmlns:templates="clr-namespace:MeetupApp.Templates"
              x:Class="MeetupApp.Views.ConnectPage">
     <templates:ContentWithHeader>
@@ -10,12 +11,12 @@
                 <Label Text="Connect" class="h2"/>
 
                 <FlexLayout class="social">
-                    <templates:SocialIcon class="social-icon" ImageSource="MobileDev.png" LabelText="Github" Command="{Binding NavigateToWebUrlCommand}" CommandParameter="https://github.com/TorontoMobileDevelopers"/>
-                    <templates:SocialIcon class="social-icon" ImageSource="MobileDev.png" LabelText="Twitter" Command="{Binding NavigateToWebUrlCommand}" CommandParameter="https://twitter.com/TOMobileDev"/>
-                    <templates:SocialIcon class="social-icon" ImageSource="MobileDev.png" LabelText="Facebook" Command="{Binding NavigateToWebUrlCommand}" CommandParameter="https://facebook.com/TorontoMobileDevelopers"/>
-                    <templates:SocialIcon class="social-icon" ImageSource="MobileDev.png" LabelText="YouTube" Command="{Binding NavigateToWebUrlCommand}" CommandParameter="https://goo.gl/hTNLhW"/>
-                    <templates:SocialIcon class="social-icon" ImageSource="MobileDev.png" LabelText="WhatsApp" Command="{Binding NavigateToWebUrlCommand}" CommandParameter="https://tinyurl.com/TOMobileYouTube"/>
-                    <templates:SocialIcon class="social-icon" ImageSource="MobileDev.png" LabelText="Meetup" Command="{Binding NavigateToWebUrlCommand}" CommandParameter="MainPage/TabbedPage/MeetingsListPage"/>
+                    <templates:SocialIcon class="social-icon" Icon="{x:Static fonts:FontAwesome.GitHub}" LabelText="Github" Command="{Binding NavigateToWebUrlCommand}" CommandParameter="https://github.com/TorontoMobileDevelopers"/>
+                    <templates:SocialIcon class="social-icon" Icon="{x:Static fonts:FontAwesome.Twitter}" LabelText="Twitter" Command="{Binding NavigateToWebUrlCommand}" CommandParameter="https://twitter.com/TOMobileDev"/>
+                    <templates:SocialIcon class="social-icon" Icon="{x:Static fonts:FontAwesome.Facebook}" LabelText="Facebook" Command="{Binding NavigateToWebUrlCommand}" CommandParameter="https://facebook.com/TorontoMobileDevelopers"/>
+                    <templates:SocialIcon class="social-icon" Icon="{x:Static fonts:FontAwesome.YouTube}" LabelText="YouTube" Command="{Binding NavigateToWebUrlCommand}" CommandParameter="https://goo.gl/hTNLhW"/>
+                    <templates:SocialIcon class="social-icon" Icon="{x:Static fonts:FontAwesome.WhatsApp}" LabelText="WhatsApp" Command="{Binding NavigateToWebUrlCommand}" CommandParameter="https://tinyurl.com/TOMobileYouTube"/>
+                    <templates:SocialIcon class="social-icon" Icon="{x:Static fonts:FontAwesome.GitHub}" LabelText="Meetup" Command="{Binding NavigateToWebUrlCommand}" CommandParameter="MainPage/TabbedPage/MeetingsListPage"/>
                 </FlexLayout>
             </StackLayout>
         </ScrollView>

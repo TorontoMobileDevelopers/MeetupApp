@@ -8,6 +8,7 @@
         <ScrollView class="content">
             <StackLayout Margin="20">
                 <Label Text="About Us" class="h2"/>
+
                 <Label Text="The support you need in the changing world of Xamarin, iOS and Android!" />
                 
                 <Label Text="Sponsored By BSI Labs" class="h2" Margin="0,20,0,0"/>

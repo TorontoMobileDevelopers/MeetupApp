@@ -9,7 +9,7 @@
             <Grid.GestureRecognizers>
                 <TapGestureRecognizer Command="{Binding Command}" CommandParameter="{Binding CommandParameter}"/>
             </Grid.GestureRecognizers>
-            <Image Source="{Binding ImageSource}"/>
+            <Label Text="{Binding Icon}" Style="{StaticResource LabelIconStyle}" />
             <Label Grid.Row="1" Text="{Binding LabelText}"
                 HorizontalTextAlignment="Center" 
                 HorizontalOptions="CenterAndExpand"/>

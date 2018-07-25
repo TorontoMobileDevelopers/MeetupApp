@@ -1,4 +1,6 @@
-﻿using Prism.Navigation;
+﻿using Prism.Commands;
+using Prism.Navigation;
+using System.Windows.Input;
 
 namespace MeetupApp.ViewModels
 {

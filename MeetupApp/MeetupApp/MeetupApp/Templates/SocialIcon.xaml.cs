@@ -12,7 +12,7 @@ namespace MeetupApp.Templates
             typeof(SocialIcon),
             default(string));
 
-        public static readonly BindableProperty ImageSourceProperty = BindableProperty.Create(nameof(ImageSource),
+        public static readonly BindableProperty IconProperty = BindableProperty.Create(nameof(Icon),
             typeof(string),
             typeof(SocialIcon),
             default(string));
@@ -43,12 +43,12 @@ namespace MeetupApp.Templates
         }
 
         /// <summary>
-        ///     ImageSource summary. This is a bindable property.
+        /// Icon property (bindable)
         /// </summary>
-        public string ImageSource
+        public string Icon
         {
-            get => (string)GetValue(ImageSourceProperty);
-            set => SetValue(ImageSourceProperty, value);
+            get => (string)GetValue(IconProperty);
+            set => SetValue(IconProperty, value);
         }
 
         /// <summary>
