@@ -16,7 +16,7 @@
                     <templates:SocialIcon class="social-icon" Icon="{x:Static fonts:FontAwesome.Facebook}" LabelText="Facebook" Command="{Binding NavigateToWebUrlCommand}" CommandParameter="https://facebook.com/TorontoMobileDevelopers"/>
                     <templates:SocialIcon class="social-icon" Icon="{x:Static fonts:FontAwesome.YouTube}" LabelText="YouTube" Command="{Binding NavigateToWebUrlCommand}" CommandParameter="https://goo.gl/hTNLhW"/>
                     <templates:SocialIcon class="social-icon" Icon="{x:Static fonts:FontAwesome.WhatsApp}" LabelText="WhatsApp" Command="{Binding NavigateToWebUrlCommand}" CommandParameter="https://tinyurl.com/TOMobileYouTube"/>
-                    <templates:SocialIcon class="social-icon" Icon="{x:Static fonts:FontAwesome.GitHub}" LabelText="Meetup" Command="{Binding NavigateToWebUrlCommand}" CommandParameter="MainPage/TabbedPage/MeetingsListPage"/>
+                    <templates:SocialIcon class="social-icon" Icon="{x:Static fonts:FontAwesome.Meetup}" LabelText="Meetup" Command="{Binding NavigateToWebUrlCommand}" CommandParameter="MainPage/TabbedPage/MeetingsListPage"/>
                 </FlexLayout>
             </StackLayout>
         </ScrollView>

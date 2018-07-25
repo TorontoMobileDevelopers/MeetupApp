@@ -36,5 +36,9 @@
 	<string>TO Mobile Dev</string>
 	<key>XSLaunchImageAssets</key>
 	<string>Assets.xcassets/LaunchImage.launchimage</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>fa-brands-400.ttf</string>
+	</array>
 </dict>
 </plist>
