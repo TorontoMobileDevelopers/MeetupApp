@@ -10,7 +10,8 @@
             <ListView ItemsSource="{Binding RefreshCommand.EventList}"
                       IsPullToRefreshEnabled="True"
                       RefreshCommand="{Binding RefreshCommand}"
-                      IsRefreshing="{Binding RefreshCommand.IsRefreshing}">
+                      IsRefreshing="{Binding RefreshCommand.IsRefreshing}"
+                      BackgroundColor="Transparent">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <!--<ViewCell>

@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Windows.Input;
 using Xamarin.Forms;
 
-namespace MeetupApp.Templates
+namespace MeetupApp.Controls
 {
     public partial class SocialIcon : ContentView
     {
@@ -17,16 +16,11 @@ namespace MeetupApp.Templates
             typeof(SocialIcon),
             default(string));
 
-        public static readonly BindableProperty CommandProperty = BindableProperty.Create(nameof(Command),
-            typeof(ICommand),
+        public static readonly BindableProperty UrlProperty = BindableProperty.Create(nameof(Url),
+            typeof(string),
             typeof(SocialIcon),
-            default(ICommand));
+            default(string));
 
-        public static readonly BindableProperty CommandParameterProperty = BindableProperty.Create(nameof(CommandParameter),
-            typeof(object),
-            typeof(SocialIcon),
-            default);
-        
         public SocialIcon()
         {
             InitializeComponent();
@@ -52,21 +46,17 @@ namespace MeetupApp.Templates
         }
 
         /// <summary>
-        ///     Command summary. This is a bindable property.
+        ///     Url summary. This is a bindable property.
         /// </summary>
-        public ICommand Command
+        public string Url
         {
-            get => (ICommand)GetValue(CommandProperty);
-            set => SetValue(CommandProperty, value);
+            get => (string)GetValue(UrlProperty);
+            set => SetValue(UrlProperty, value);
         }
 
-        /// <summary>
-        ///     CommandParameter summary. This is a bindable property.
-        /// </summary>
-        public object CommandParameter
+        public void OnTapped(object sender, EventArgs e)
         {
-            get => GetValue(CommandParameterProperty);
-            set => SetValue(CommandParameterProperty, value);
+            Device.OpenUri(new Uri(Url));
         }
     }
 }

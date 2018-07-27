@@ -26,9 +26,11 @@
     <Folder Include="Services\" />
     <Folder Include="Commands\" />
     <Folder Include="Templates\" />
+    <Folder Include="Controls\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="MainPage.xaml.cs" />
+    <Compile Remove="Templates\SocialIcon.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Views\MyPage.cs" />
