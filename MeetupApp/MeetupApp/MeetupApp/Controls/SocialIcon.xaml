@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MeetupApp.Templates.SocialIcon">
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="MeetupApp.Controls.SocialIcon"
+             class="social-icon">
     <ContentView.Content>
         <Grid>
             <Grid.RowDefinitions>
@@ -7,7 +10,7 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <Grid.GestureRecognizers>
-                <TapGestureRecognizer Command="{Binding Command}" CommandParameter="{Binding CommandParameter}"/>
+                <TapGestureRecognizer Tapped="OnTapped"/>
             </Grid.GestureRecognizers>
             <Label Text="{Binding Icon}" Style="{StaticResource LabelIconStyle}" />
             <Label Grid.Row="1" Text="{Binding LabelText}"

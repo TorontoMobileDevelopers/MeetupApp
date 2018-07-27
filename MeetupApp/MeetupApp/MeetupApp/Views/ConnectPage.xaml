@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:MeetupApp.Views"
              xmlns:fonts="clr-namespace:MeetupApp.Fonts"
              xmlns:templates="clr-namespace:MeetupApp.Templates"
+             xmlns:controls="clr-namespace:MeetupApp.Controls"
              x:Class="MeetupApp.Views.ConnectPage">
     <templates:ContentWithHeader>
         <ScrollView class="content">
@@ -11,12 +12,12 @@
                 <Label Text="Connect" class="h2"/>
 
                 <FlexLayout class="social">
-                    <templates:SocialIcon class="social-icon" Icon="{x:Static fonts:FontAwesome.GitHub}" LabelText="Github" Command="{Binding NavigateToWebUrlCommand}" CommandParameter="https://github.com/TorontoMobileDevelopers"/>
-                    <templates:SocialIcon class="social-icon" Icon="{x:Static fonts:FontAwesome.Twitter}" LabelText="Twitter" Command="{Binding NavigateToWebUrlCommand}" CommandParameter="https://twitter.com/TOMobileDev"/>
-                    <templates:SocialIcon class="social-icon" Icon="{x:Static fonts:FontAwesome.Facebook}" LabelText="Facebook" Command="{Binding NavigateToWebUrlCommand}" CommandParameter="https://facebook.com/TorontoMobileDevelopers"/>
-                    <templates:SocialIcon class="social-icon" Icon="{x:Static fonts:FontAwesome.YouTube}" LabelText="YouTube" Command="{Binding NavigateToWebUrlCommand}" CommandParameter="https://goo.gl/hTNLhW"/>
-                    <templates:SocialIcon class="social-icon" Icon="{x:Static fonts:FontAwesome.WhatsApp}" LabelText="WhatsApp" Command="{Binding NavigateToWebUrlCommand}" CommandParameter="https://tinyurl.com/TOMobileYouTube"/>
-                    <templates:SocialIcon class="social-icon" Icon="{x:Static fonts:FontAwesome.Meetup}" LabelText="Meetup" Command="{Binding NavigateToWebUrlCommand}" CommandParameter="MainPage/TabbedPage/MeetingsListPage"/>
+                    <controls:SocialIcon Icon="{x:Static fonts:FontAwesome.GitHub}" LabelText="Github" Url="https://github.com/TorontoMobileDevelopers"/>
+                    <controls:SocialIcon Icon="{x:Static fonts:FontAwesome.Twitter}" LabelText="Twitter" Url="https://twitter.com/TOMobileDev"/>
+                    <controls:SocialIcon Icon="{x:Static fonts:FontAwesome.Facebook}" LabelText="Facebook" Url="https://facebook.com/TorontoMobileDevelopers"/>
+                    <controls:SocialIcon Icon="{x:Static fonts:FontAwesome.YouTube}" LabelText="YouTube" Url="https://tinyurl.com/TOMobileYouTube"/>
+                    <controls:SocialIcon Icon="{x:Static fonts:FontAwesome.WhatsApp}" LabelText="WhatsApp" Url="https://goo.gl/hTNLhW"/>
+                    <controls:SocialIcon Icon="{x:Static fonts:FontAwesome.Meetup}" LabelText="Meetup" Url="https://www.meetup.com/TorontoMobileDevelopers"/>
                 </FlexLayout>
             </StackLayout>
         </ScrollView>
