@@ -107,6 +107,7 @@
     <ITunesArtwork Include="iTunesArtwork@3x.png" />
     <BundleResource Include="Resources\fa-brands-400.ttf" />
     <BundleResource Include="Resources\fa-regular-400.ttf" />
+    <Compile Include="Renderers\SwipeTabbedRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Contents.json">
@@ -223,6 +224,9 @@
       <Project>{9D5EB0F3-A4D1-4BCC-AEBE-F03C592F86C9}</Project>
       <Name>MeetupApp</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Renderers\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
