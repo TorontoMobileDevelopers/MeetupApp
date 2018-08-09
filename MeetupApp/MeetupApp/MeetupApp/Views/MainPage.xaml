@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+<iconize:IconTabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:MeetupApp.Views"
              xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:iconize="clr-namespace:Plugin.Iconize;assembly=Plugin.Iconize"
+             xmlns:fonts="clr-namespace:MeetupApp.Fonts"
              android:TabbedPage.ToolbarPlacement="Bottom"
              x:Class="MeetupApp.Views.MainPage">
     <TabbedPage.Children>
-        <NavigationPage Title="Meetings">
+        <NavigationPage Title="Meetings" Icon="{x:Static fonts:FontAwesome.Meetings}">
             <x:Arguments>
                 <local:MeetingsListPage />
             </x:Arguments>
         </NavigationPage>
-        <NavigationPage Title="Connect">
+        <NavigationPage Title="Connect" Icon="{x:Static fonts:FontAwesome.Connect}">
             <x:Arguments>
                 <local:ConnectPage />
             </x:Arguments>
         </NavigationPage>
-        <NavigationPage Title="About">
+        <NavigationPage Title="About" Icon="{x:Static fonts:FontAwesome.About}">
             <x:Arguments>
                 <local:AboutPage />
             </x:Arguments>
         </NavigationPage>
     </TabbedPage.Children>
-</TabbedPage>
+</iconize:IconTabbedPage>

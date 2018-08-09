@@ -5,7 +5,26 @@
              xmlns:fonts="clr-namespace:MeetupApp.Fonts"
              xmlns:templates="clr-namespace:MeetupApp.Templates"
              xmlns:controls="clr-namespace:MeetupApp.Controls"
+             xmlns:converters="clr-namespace:MeetupApp.Converters"
              x:Class="MeetupApp.Views.ConnectPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            
+            <OnPlatform x:Key="FABrandsFontFamily" x:TypeArguments="x:String">
+                <On Platform="Android" Value="fa-brands-400.ttf#fa-brands-400"/>
+                <On Platform="iOS" Value="Font Awesome 5 Brands"/>
+                <On Platform="UWP" Value="fa-brands-400.ttf"/>
+            </OnPlatform>
+
+            <Style x:Key="LabelIconStyle" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource FABrandsFontFamily}"/>
+                <Setter Property="FontSize" Value="25"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+            </Style>
+            
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <templates:ContentWithHeader>
         <ScrollView class="content">
             <StackLayout Margin="20">

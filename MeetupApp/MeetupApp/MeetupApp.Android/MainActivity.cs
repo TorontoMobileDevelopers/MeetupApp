@@ -1,4 +1,5 @@
-﻿using Android.App;
+﻿using System;
+using Android.App;
 using Android.Content.PM;
 using Android.OS;
 using Prism;
@@ -16,8 +17,15 @@ namespace MeetupApp.Droid
 
             base.OnCreate(bundle);
 
+            InitDependencies();
+
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App(new AndroidInitializer()));
+        }
+
+        private void InitDependencies()
+        {
+            Plugin.Iconize.Iconize.Init(Resource.Id.toolbar, Resource.Id.sliding_tabs);
         }
     }
 
