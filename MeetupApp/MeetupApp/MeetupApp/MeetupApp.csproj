@@ -28,6 +28,7 @@
     <Folder Include="Commands\" />
     <Folder Include="Templates\" />
     <Folder Include="Controls\" />
+    <Folder Include="Converters\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="MainPage.xaml.cs" />

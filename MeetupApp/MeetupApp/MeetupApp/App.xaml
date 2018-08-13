@@ -13,13 +13,6 @@
                 <On Platform="iOS" Value="Font Awesome 5 Brands"/>
                 <On Platform="UWP" Value="fa-brands-400.ttf"/>
             </OnPlatform>
-
-            <Style x:Key="LabelIconStyle" TargetType="Label">
-                <Setter Property="FontFamily" Value="{StaticResource FABrandsFontFamily}"/>
-                <Setter Property="FontSize" Value="25"/>
-                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
-                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
-            </Style>
             
         </ResourceDictionary>
 	</Application.Resources>

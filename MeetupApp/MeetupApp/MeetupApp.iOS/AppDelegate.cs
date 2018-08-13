@@ -1,4 +1,5 @@
 ﻿using Foundation;
+using Plugin.Iconize;
 using Prism;
 using Prism.Ioc;
 using UIKit;
@@ -22,6 +23,7 @@ namespace MeetupApp.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            var bb = new IconImageRenderer();
             LoadApplication(new App(new iOSInitializer()));
 
             return base.FinishedLaunching(app, options);

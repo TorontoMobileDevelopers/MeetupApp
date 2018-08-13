@@ -3,6 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="MeetupApp.Controls.SocialIcon"
              class="social-icon">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="LabelIconStyle" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource FABrandsFontFamily}"/>
+                <Setter Property="FontSize" Value="25"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentView.Content>
         <Grid>
             <Grid.RowDefinitions>

@@ -3,55 +3,59 @@ using Plugin.Iconize;
 
 namespace MeetupApp.Fonts
 {
-    public static class FontAwesome
+    public static class FontAwesomeRegular
     {
-        static FontAwesome()
+        private static IIcon _meetings = new Icon(nameof(Meetings), '\uf073');
+        private static IIcon _connect = new Icon(nameof(Connect), '\uf1e6');
+        private static IIcon _about = new Icon(nameof(About), '\uf129');
+
+        public static IList<IIcon> Items { get; } = new List<IIcon>
         {
-            Items.Add(nameof(Meetup), _meetup);
-            Items.Add(nameof(GitHub), _gitHub);
-            Items.Add(nameof(YouTube), _youTube);
-            Items.Add(nameof(Twitter), _twitter);
-            Items.Add(nameof(WhatsApp), _whatsApp);
-            Items.Add(nameof(Facebook), _facebook);
-            Items.Add(nameof(Other), _other);
+            _meetings,
+            _connect,
+            _about
+        };
 
-            Items.Add(nameof(Meetings), _meetings);
-            Items.Add(nameof(Connect), _connect);
-            Items.Add(nameof(About), _about);
-        }
+        public static string MeetingsKey => _meetings.Key;
+        public static string ConnectKey => _connect.Key;
+        public static string AboutKey => _about.Key;
 
-        public static IList<IIcon> Items { get; } = new List<IIcon>();
+        public static string Meetings => _meetings.Character.ToString();
+        public static string Connect => _connect.Character.ToString();
+        public static string About => _about.Character.ToString();
+    }
 
-        public static string Meetup => _meetup.ToString();
+    public static class FontAwesomeBrands
+    {
+        private static IIcon _meetup = new Icon(nameof(Meetup), '\uf2e0');
+        private static IIcon _gitHub = new Icon(nameof(GitHub), '\uf09b');
+        private static IIcon _youTube = new Icon(nameof(YouTube), '\uf167');
+        private static IIcon _twitter = new Icon(nameof(Twitter), '\uf099');
+        private static IIcon _whatsApp = new Icon(nameof(WhatsApp), '\uf232');
+        private static IIcon _facebook = new Icon(nameof(Facebook), '\uf39e');
 
-        public static string GitHub => _gitHub.ToString();
+        public static IList<IIcon> Items { get; } = new List<IIcon>
+        {
+            _meetup,
+            _gitHub,
+            _youTube,
+            _twitter,
+            _whatsApp,
+            _facebook,
+        };
 
-        public static string YouTube => _youTube.ToString();
+        public static string MeetupKey => _meetup.Key;
+        public static string GitHubKey => _gitHub.Key;
+        public static string YouTubeKey => _youTube.Key;
+        public static string TwitterKey => _twitter.Key;
+        public static string WhatsAppKey => _whatsApp.Key;
+        public static string FacebookKey => _facebook.Key;
 
-        public static string Twitter => _twitter.ToString();
-
-        public static string WhatsApp => _whatsApp.ToString();
-
-        public static string Facebook => _facebook.ToString();
-
-        public static string Other => _other.ToString();
-
-        public static string Meetings => _meetings.ToString();
-
-        public static string Connect => _connect.ToString();
-
-        public static string About => _about.ToString();
-
-        private const char _meetup = '\uf2e0';
-        private const char _gitHub = '\uf09b';
-        private const char _youTube = '\uf167';
-        private const char _twitter = '\uf099';
-        private const char _whatsApp = '\uf232';
-        private const char _facebook = '\uf39e';
-        private const char _other = '\uf1a8';
-
-        private const char _meetings = '\uf073';
-        private const char _connect = '\uf1e6';
-        private const char _about = '\uf129';
+        public static string Meetup => _meetup.Character.ToString();
+        public static string GitHub => _gitHub.Character.ToString();
+        public static string YouTube => _youTube.Character.ToString();
+        public static string Twitter => _twitter.Character.ToString();
+        public static string WhatsApp => _whatsApp.Character.ToString();
+        public static string Facebook => _facebook.Character.ToString();
     }
 }
