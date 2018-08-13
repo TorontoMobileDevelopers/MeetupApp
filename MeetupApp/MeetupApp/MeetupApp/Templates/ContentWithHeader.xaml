@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MeetupApp.Templates.ContentWithHeader">
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="MeetupApp.Templates.ContentWithHeader">
     <ContentView.ControlTemplate>
         <ControlTemplate>
             <Grid ColumnSpacing="0" RowSpacing="0">

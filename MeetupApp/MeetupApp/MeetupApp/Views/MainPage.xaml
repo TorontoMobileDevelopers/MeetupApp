@@ -6,17 +6,23 @@
              android:TabbedPage.ToolbarPlacement="Bottom"
              x:Class="MeetupApp.Views.MainPage">
     <TabbedPage.Children>
-        <NavigationPage Title="Meetings">
+        <NavigationPage Title="Meetings"
+                        BarBackgroundColor="#e43f96"
+                        BarTextColor="White">
             <x:Arguments>
                 <local:MeetingsListPage />
             </x:Arguments>
         </NavigationPage>
-        <NavigationPage Title="Connect">
+        <NavigationPage Title="Connect"
+                        BarBackgroundColor="#e43f96"
+                        BarTextColor="White">
             <x:Arguments>
                 <local:ConnectPage />
             </x:Arguments>
         </NavigationPage>
-        <NavigationPage Title="About">
+        <NavigationPage Title="About"
+                        BarBackgroundColor="#e43f96"
+                        BarTextColor="White">
             <x:Arguments>
                 <local:AboutPage />
             </x:Arguments>
