@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<iconize:IconTabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+<controls:IconBottomTabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:MeetupApp.Views"
              xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
-             xmlns:iconize="clr-namespace:Plugin.Iconize;assembly=Plugin.Iconize"
+             xmlns:controls="clr-namespace:MeetupApp.Controls"
              xmlns:fonts="clr-namespace:MeetupApp.Fonts"
              android:TabbedPage.ToolbarPlacement="Bottom"
+             android:TabbedPage.BackgroundColor="#e0288d"
+             android:TabbedPage.BarItemColor="White"
              x:Class="MeetupApp.Views.MainPage">
     <NavigationPage Title="Meetings" Icon="{x:Static fonts:FontAwesomeRegular.MeetingsKey}">
         <x:Arguments>
@@ -22,4 +24,4 @@
             <local:AboutPage />
         </x:Arguments>
     </NavigationPage>
-</iconize:IconTabbedPage>
+</controls:IconBottomTabbedPage>
