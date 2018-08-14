@@ -4,14 +4,8 @@
              xmlns:local="clr-namespace:MeetupApp.Views"
              xmlns:templates="clr-namespace:MeetupApp.Templates"
              xmlns:behaviors="clr-namespace:MeetupApp.Behaviors"
-             xmlns:converters="clr-namespace:MeetupApp.Converters"
              x:Class="MeetupApp.Views.MeetingsListPage">
     <templates:ContentWithHeader>
-        <local:BasePage.Resources>
-            <ResourceDictionary>
-                <converters:ItemTappedEventArgsConverter x:Key="itemTappedEventArgsConverter" />
-            </ResourceDictionary>
-        </local:BasePage.Resources>
         <StackLayout class="content">
             <Label Text="Upcoming Meetings" Margin="20" class="h2"/>
             <ListView ItemsSource="{Binding RefreshCommand.EventList}"
@@ -27,10 +21,9 @@
                 <ListView.Behaviors>
                     <behaviors:EventToCommandBehavior EventName="ItemTapped"
                                                       Command="{Binding NavigateToWebUrlCommand}"
-                                                      EventArgsConverter="{StaticResource itemTappedEventArgsConverter}" />
+                                                      EventArgsParameterPath="Item" />
                 </ListView.Behaviors>
             </ListView>
-
         </StackLayout>
     </templates:ContentWithHeader>
 </local:BasePage>
