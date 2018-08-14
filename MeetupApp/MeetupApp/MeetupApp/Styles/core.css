@@ -1,6 +1,7 @@
 ^ContentPage {
     background-color: #33333c;
     background-image: Background.png;
+    color: white;
 }
 
 .h1 {
