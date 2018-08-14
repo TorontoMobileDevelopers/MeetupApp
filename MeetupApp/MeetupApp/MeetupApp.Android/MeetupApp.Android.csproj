@@ -110,6 +110,8 @@
     <AndroidResource Include="Resources\drawable\MobileDev.png" />
     <AndroidResource Include="Resources\drawable\bsilabs.png" />
     <AndroidResource Include="Resources\drawable\Background.xml" />
+    <AndroidResource Include="Resources\drawable\splash_background.xml" />
+    <AndroidResource Include="Resources\drawable\MobileDev60.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />

@@ -7,17 +7,23 @@
              xmlns:fonts="clr-namespace:MeetupApp.Fonts"
              android:TabbedPage.ToolbarPlacement="Bottom"
              x:Class="MeetupApp.Views.MainPage">
-    <NavigationPage Title="Meetings" Icon="{x:Static fonts:FontAwesomeRegular.MeetingsKey}">
+    <NavigationPage Title="Meetings" Icon="{x:Static fonts:FontAwesomeRegular.MeetingsKey}"
+                        BarBackgroundColor="#e43f96"
+                        BarTextColor="White">
         <x:Arguments>
             <local:MeetingsListPage />
         </x:Arguments>
     </NavigationPage>
-    <NavigationPage Title="Connect" Icon="{x:Static fonts:FontAwesomeRegular.ConnectKey}">
+    <NavigationPage Title="Connect" Icon="{x:Static fonts:FontAwesomeRegular.ConnectKey}"
+                        BarBackgroundColor="#e43f96"
+                        BarTextColor="White">
         <x:Arguments>
             <local:ConnectPage />
         </x:Arguments>
     </NavigationPage>
-    <NavigationPage Title="About" Icon="{x:Static fonts:FontAwesomeRegular.AboutKey}">
+    <NavigationPage Title="About" Icon="{x:Static fonts:FontAwesomeRegular.AboutKey}"
+                        BarBackgroundColor="#e43f96"
+                        BarTextColor="White">
         <x:Arguments>
             <local:AboutPage />
         </x:Arguments>

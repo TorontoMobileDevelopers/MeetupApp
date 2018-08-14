@@ -78,7 +78,7 @@ namespace MeetupApp.Commands
                         {
                             Title = (string)item.Element("title"),
                             Description = (string)item.Element("description"),
-                            Link = (string)item.Element("link"),
+                            Link = (string)item.Element("guid"),
                             PublishDate = (string)item.Element("pubDate"),
                             AuthorEmail = (string)item.Element("author"),
                             Id = id++
