@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:MeetupApp.Views"
              xmlns:templates="clr-namespace:MeetupApp.Templates"
+             xmlns:behaviors="clr-namespace:MeetupApp.Behaviors"
              x:Class="MeetupApp.Views.MeetingsListPage">
     <templates:ContentWithHeader>
         <StackLayout class="content">
@@ -14,12 +15,14 @@
                       BackgroundColor="Transparent">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <!--<ViewCell>
-                            <Label Text="{Binding Title}"/>
-                        </ViewCell>-->
-                        <TextCell Text="{Binding Title}" TextColor="White" /><!-- Detail="{Binding Description}" />-->
+                        <TextCell Text="{Binding Title}" TextColor="White" />
                     </DataTemplate>
                 </ListView.ItemTemplate>
+                <ListView.Behaviors>
+                    <behaviors:EventToCommandBehavior EventName="ItemTapped"
+                                                      Command="{Binding NavigateToWebUrlCommand}"
+                                                      EventArgsParameterPath="Item" />
+                </ListView.Behaviors>
             </ListView>
         </StackLayout>
     </templates:ContentWithHeader>
