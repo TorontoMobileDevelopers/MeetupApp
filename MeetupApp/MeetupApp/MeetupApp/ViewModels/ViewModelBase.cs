@@ -23,7 +23,7 @@ namespace MeetupApp.ViewModels
             NavigationService = navigationService;
         }
 
-        public ICommand NavigateToWebUrlCommand => new DelegateCommand<string>(url => Device.OpenUri(new Uri(url)));
+        public virtual ICommand NavigateToWebUrlCommand => new DelegateCommand<string>(url => Device.OpenUri(new Uri(url)));
 
         public virtual void OnNavigatedFrom(INavigationParameters parameters) {}
 
