@@ -3,8 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:MeetupApp.Views"
              xmlns:templates="clr-namespace:MeetupApp.Templates"
+             xmlns:behaviors="clr-namespace:MeetupApp.Behaviors"
+             xmlns:converters="clr-namespace:MeetupApp.Converters"
              x:Class="MeetupApp.Views.MeetingsListPage">
     <templates:ContentWithHeader>
+        <local:BasePage.Resources>
+            <ResourceDictionary>
+                <converters:ItemTappedEventArgsConverter x:Key="itemTappedEventArgsConverter" />
+            </ResourceDictionary>
+        </local:BasePage.Resources>
         <StackLayout class="content">
             <Label Text="Upcoming Meetings" Margin="20" class="h2"/>
             <ListView ItemsSource="{Binding RefreshCommand.EventList}"
@@ -14,13 +21,16 @@
                       BackgroundColor="Transparent">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <!--<ViewCell>
-                            <Label Text="{Binding Title}"/>
-                        </ViewCell>-->
-                        <TextCell Text="{Binding Title}" TextColor="White" /><!-- Detail="{Binding Description}" />-->
+                        <TextCell Text="{Binding Title}" TextColor="White" />
                     </DataTemplate>
                 </ListView.ItemTemplate>
+                <ListView.Behaviors>
+                    <behaviors:EventToCommandBehavior EventName="ItemTapped"
+                                                      Command="{Binding NavigateToWebUrlCommand}"
+                                                      EventArgsConverter="{StaticResource itemTappedEventArgsConverter}" />
+                </ListView.Behaviors>
             </ListView>
+
         </StackLayout>
     </templates:ContentWithHeader>
 </local:BasePage>
