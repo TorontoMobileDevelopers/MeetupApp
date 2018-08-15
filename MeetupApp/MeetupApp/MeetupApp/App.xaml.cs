@@ -48,14 +48,14 @@ namespace MeetupApp
         public override void Initialize()
         {
             base.Initialize();
-            Iconize.With(new FontAwesomeFreeIconModule());
+            Iconize.With(new FontAwesomeProIconModule());
                   //.With(new FontAwesomeBrandsIconModule());
         }
     }
 
-    public class FontAwesomeFreeIconModule : IconModule
+    public class FontAwesomeProIconModule : IconModule
     {
-        public FontAwesomeFreeIconModule()
+        public FontAwesomeProIconModule()
             : base("Font Awesome 5 Pro", "Font Awesome 5 Pro Regular", "fa-regular-400.ttf", FontAwesomeRegular.Items) {}
     }
 
