@@ -6,8 +6,8 @@
              xmlns:controls="clr-namespace:MeetupApp.Controls"
              xmlns:fonts="clr-namespace:MeetupApp.Fonts"
              android:TabbedPage.ToolbarPlacement="Bottom"
-             android:TabbedPage.BackgroundColor="#e0288d"
-             android:TabbedPage.BarItemColor="White"
+             BarTextColor="White"
+             BarBackgroundColor="#e43f96"
              x:Class="MeetupApp.Views.MainPage">
     <NavigationPage Title="Meetings" Icon="{x:Static fonts:FontAwesomeRegular.MeetingsKey}"
                         BarBackgroundColor="#e43f96"
