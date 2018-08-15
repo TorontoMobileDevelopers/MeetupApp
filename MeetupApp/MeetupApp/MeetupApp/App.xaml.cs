@@ -8,6 +8,8 @@ using MeetupApp.Commands;
 using MeetupApp.Services;
 using MonkeyCache.SQLite;
 using Xamarin.Essentials;
+using Plugin.Iconize;
+using MeetupApp.Fonts;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace MeetupApp
@@ -42,5 +44,24 @@ namespace MeetupApp
 
             containerRegistry.Register<ILoadEventsCommand, LoadEventsCommand>();
         }
+
+        public override void Initialize()
+        {
+            base.Initialize();
+            Iconize.With(new FontAwesomeFreeIconModule());
+                  //.With(new FontAwesomeBrandsIconModule());
+        }
+    }
+
+    public class FontAwesomeFreeIconModule : IconModule
+    {
+        public FontAwesomeFreeIconModule()
+            : base("Font Awesome 5 Pro", "Font Awesome 5 Pro Regular", "fa-regular-400.ttf", FontAwesomeRegular.Items) {}
+    }
+
+    public class FontAwesomeBrandsIconModule : IconModule
+    {
+        public FontAwesomeBrandsIconModule()
+            : base("Font Awesome 5 Brands", "Font Awesome 5 Brands Regular", "fa-brands-400.ttf", FontAwesomeBrands.Items) { }
     }
 }

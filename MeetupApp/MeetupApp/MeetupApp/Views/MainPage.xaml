@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+<iconize:IconTabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:MeetupApp.Views"
              xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:iconize="clr-namespace:Plugin.Iconize;assembly=Plugin.Iconize"
+             xmlns:fonts="clr-namespace:MeetupApp.Fonts"
              android:TabbedPage.ToolbarPlacement="Bottom"
              x:Class="MeetupApp.Views.MainPage">
-    <TabbedPage.Children>
-        <NavigationPage Title="Meetings"
+    <NavigationPage Title="Meetings" Icon="{x:Static fonts:FontAwesomeRegular.MeetingsKey}"
                         BarBackgroundColor="#e43f96"
                         BarTextColor="White">
-            <x:Arguments>
-                <local:MeetingsListPage />
-            </x:Arguments>
-        </NavigationPage>
-        <NavigationPage Title="Connect"
+        <x:Arguments>
+            <local:MeetingsListPage />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Connect" Icon="{x:Static fonts:FontAwesomeRegular.ConnectKey}"
                         BarBackgroundColor="#e43f96"
                         BarTextColor="White">
-            <x:Arguments>
-                <local:ConnectPage />
-            </x:Arguments>
-        </NavigationPage>
-        <NavigationPage Title="About"
+        <x:Arguments>
+            <local:ConnectPage />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="About" Icon="{x:Static fonts:FontAwesomeRegular.AboutKey}"
                         BarBackgroundColor="#e43f96"
                         BarTextColor="White">
-            <x:Arguments>
-                <local:AboutPage />
-            </x:Arguments>
-        </NavigationPage>
-    </TabbedPage.Children>
-</TabbedPage>
+        <x:Arguments>
+            <local:AboutPage />
+        </x:Arguments>
+    </NavigationPage>
+</iconize:IconTabbedPage>

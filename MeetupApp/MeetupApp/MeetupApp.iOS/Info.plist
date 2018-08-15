@@ -38,7 +38,8 @@
 	<string>Assets.xcassets/LaunchImage.launchimage</string>
 	<key>UIAppFonts</key>
 	<array>
-		<string>fa-brands-400.ttf</string>
+		<string>Fonts/fa-brands-400.ttf</string>
+		<string>Fonts/fa-regular-400.ttf</string>
 	</array>
 </dict>
 </plist>
