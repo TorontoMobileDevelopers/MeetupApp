@@ -23,7 +23,9 @@ public class SwipeTabbedRenderer : TabbedRenderer
         int nextIndex = TabbedPage.GetIndex(Tabbed.CurrentPage) + direction;
         if (nextIndex < 0 || nextIndex >= Tabbed.Children.Count) return;
         var nextPage = Tabbed.Children[nextIndex];
-        UIView.Transition(Platform.GetRenderer(Tabbed.CurrentPage).NativeView, Platform.GetRenderer(nextPage).NativeView, 0.15, UIViewAnimationOptions.TransitionCrossDissolve, null);
+
+        UIView.Transition(Platform.GetRenderer(Tabbed.CurrentPage).NativeView, Platform.GetRenderer(nextPage).NativeView, 0.5, UIViewAnimationOptions.TransitionCrossDissolve, null);
+
         Tabbed.CurrentPage = nextPage;
     }
 
