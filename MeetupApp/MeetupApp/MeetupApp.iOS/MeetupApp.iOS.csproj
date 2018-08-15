@@ -104,7 +104,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <ITunesArtwork Include="iTunesArtwork@1x.png" />
     <ITunesArtwork Include="iTunesArtwork@2x.png" />
-    <ITunesArtwork Include="iTunesArtwork@3x.png" />
     <Compile Include="Renderers\SwipeTabbedRenderer.cs" />
     <BundleResource Include="Resources\Fonts\fa-brands-400.ttf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
