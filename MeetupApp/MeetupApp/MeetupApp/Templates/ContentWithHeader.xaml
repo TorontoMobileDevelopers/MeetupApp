@@ -13,11 +13,10 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <StackLayout Orientation="Horizontal" 
-                     Grid.Row="0" Grid.Column="0"
-                             Margin="20">
-                    <Image Source="MobileDev.png" Scale="0.65" VerticalOptions="Center"/>
-                    <Label Text="Toronto Mobile .NET Developers" class="h1"
-                           VerticalOptions="CenterAndExpand"/>
+                     Grid.Row="0" Grid.Column="0">
+                    <Image Source="MobileDev.png" Scale="0.65" VerticalOptions="Center" Margin="10,0,0,0"/>
+                    <Label Text="Toronto Mobile .NET Developers" class="h1" 
+                           VerticalOptions="CenterAndExpand" />
                 </StackLayout>
                 <ContentPresenter Grid.Row="1" Grid.Column="0"/>
             </Grid>
