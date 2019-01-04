@@ -1,9 +1,4 @@
-﻿using System;
-using System.ComponentModel;
-using CoreAnimation;
-using CoreGraphics;
-using MeetupApp.iOS;
-using UIKit;
+﻿using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
@@ -20,7 +15,7 @@ public class SwipeTabbedRenderer : TabbedRenderer
 
     void SelectNextTab(int direction)
     {
-        int nextIndex = TabbedPage.GetIndex(Tabbed.CurrentPage) + direction;
+        int nextIndex = MultiPage<Page>.GetIndex(Tabbed.CurrentPage) + direction;
         if (nextIndex < 0 || nextIndex >= Tabbed.Children.Count) return;
         var nextPage = Tabbed.Children[nextIndex];
 

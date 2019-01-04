@@ -20,7 +20,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
     <AndroidStoreUncompressedFileExtensions />
     <MandroidI18n />
     <JavaMaximumHeapSize />
@@ -74,19 +73,19 @@
       <Version>27.0.2.1</Version>
     </PackageReference>
     <PackageReference Include="Prism.Autofac.Forms">
-      <Version>7.1.0.172-pre</Version>
+      <Version>7.1.0.431</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Essentials">
-      <Version>0.8.0-preview</Version>
+      <Version>1.0.0</Version>
     </PackageReference>
     <PackageReference Include="MonkeyCache.SQLite">
-      <Version>0.1.0.10-beta</Version>
+      <Version>1.0.1-beta</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms">
-      <Version>3.2.0.637442-pre1</Version>
+      <Version>4.0.1.7734-nightly</Version>
     </PackageReference>
     <PackageReference Include="Xam.Plugin.Iconize">
-      <Version>3.0.0.67</Version>
+      <Version>3.4.0.104</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
