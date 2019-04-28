@@ -3,7 +3,25 @@ using System.Text.RegularExpressions;
 
 namespace MeetupApp.Models
 {
-    public class RssFeedItem
+    public interface IRssFeedItem
+    {
+        string Description { get; set; }
+        string Link { get; set; }
+        string PublishDate { get; set; }
+        string Author { get; set; }
+        string AuthorEmail { get; set; }
+        int Id { get; set; }
+        string Title { get; set; }
+        string Caption { get; }
+        bool ShowImage { get; set; }
+
+        /// <summary>
+        /// When we set the image, mark show image as true
+        /// </summary>
+        string Image { get; set; }
+    }
+
+    public class RssFeedItem : IRssFeedItem
     {
         public string Description { get; set; }
         public string Link { get; set; }
