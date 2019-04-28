@@ -12,7 +12,7 @@
     <RootNamespace>MeetupApp.Droid</RootNamespace>
     <AssemblyName>MeetupApp.Android</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
@@ -63,7 +63,7 @@
     <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
     <PackageReference Include="MonkeyCache.SQLite" Version="1.2.0-beta" />
     <PackageReference Include="Xamarin.Forms" Version="4.0.0.346134-pre9" />
-    <PackageReference Include="Xam.Plugin.Iconize" Version="3.0.0.67" />
+    <PackageReference Include="Xam.Plugin.Iconize" Version="3.5.0.123" />
     <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.1" />
     <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.1" />
     <PackageReference Include="Xamarin.Android.Support.v4" Version="28.0.0.1" />

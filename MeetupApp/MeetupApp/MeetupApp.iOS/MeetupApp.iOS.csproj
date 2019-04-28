@@ -226,7 +226,7 @@
       <Version>4.0.1.383393-nightly</Version>
     </PackageReference>
     <PackageReference Include="Xam.Plugin.Iconize">
-      <Version>3.0.0.67</Version>
+      <Version>3.5.0.123</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
