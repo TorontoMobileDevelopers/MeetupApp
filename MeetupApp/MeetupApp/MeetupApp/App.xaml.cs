@@ -1,9 +1,10 @@
-﻿using Prism;
+﻿using System;
+using System.Diagnostics;
+using Prism;
 using Prism.Ioc;
 using MeetupApp.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Prism.Autofac;
 using MeetupApp.Commands;
 using MeetupApp.Services;
 using MonkeyCache.SQLite;
@@ -14,7 +15,7 @@ using MeetupApp.Fonts;
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace MeetupApp
 {
-    public partial class App : PrismApplication
+    public partial class App
     {
         /* 
          * The Xamarin Forms XAML Previewer in Visual Studio uses System.Activator.CreateInstance.
@@ -50,6 +51,9 @@ namespace MeetupApp
             base.Initialize();
             Iconize.With(new FontAwesomeProIconModule());
                   //.With(new FontAwesomeBrandsIconModule());
+                  
+              var personalPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+              Debug.WriteLine($"Database path: {personalPath}");
         }
     }
 
