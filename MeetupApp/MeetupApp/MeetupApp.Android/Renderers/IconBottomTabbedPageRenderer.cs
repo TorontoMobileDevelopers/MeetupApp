@@ -70,7 +70,7 @@ namespace MeetupApp.Droid.Renderers
                     if (icon == null)
                         continue;
 
-                    var drawable = new IconDrawable(Context, icon).Color(Color.White.ToAndroid()).SizeDp(20);
+                    var drawable = new Plugin.Iconize.IconDrawable(Context, icon).Color(Color.White.ToAndroid()).SizeDp(20);
 
                     menuItem.SetIcon(drawable);
                 }
