@@ -9,7 +9,6 @@ using MeetupApp.Commands;
 using MeetupApp.Services;
 using MonkeyCache.SQLite;
 using Xamarin.Essentials;
-using Plugin.Iconize;
 using MeetupApp.Fonts;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
@@ -49,17 +48,9 @@ namespace MeetupApp
         public override void Initialize()
         {
             base.Initialize();
-            Iconize.With(new FontAwesomeProIconModule());
-                  //.With(new FontAwesomeBrandsIconModule());
                   
-              var personalPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-              Debug.WriteLine($"Database path: {personalPath}");
+            var personalPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            Debug.WriteLine($"Database path: {personalPath}");
         }
-    }
-
-    public class FontAwesomeProIconModule : IconModule
-    {
-        public FontAwesomeProIconModule()
-            : base("Font Awesome 5 Pro", "Font Awesome 5 Pro Regular", "fa-regular-400.ttf", FontAwesomeRegular.Items) {}
     }
 }

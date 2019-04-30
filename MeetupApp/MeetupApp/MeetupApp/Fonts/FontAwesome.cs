@@ -1,28 +1,19 @@
 ﻿using System.Collections.Generic;
-using Plugin.Iconize;
 
 namespace MeetupApp.Fonts
 {
     public static class FontAwesomeRegular
     {
-        private static IIcon _meetings = new Icon(nameof(Meetings), '\uf073');
-        private static IIcon _connect = new Icon(nameof(Connect), '\uf1e6');
-        private static IIcon _about = new Icon(nameof(About), '\uf129');
-
-        public static IList<IIcon> Items { get; } = new List<IIcon>
+        public static IDictionary<string, char> Items { get; } = new Dictionary<string, char>
         {
-            _meetings,
-            _connect,
-            _about
+            { "Meetings", '\uf073'},
+            { "Connect", '\uf1e6'},
+            { "About", '\uf129'}
         };
 
-        public static string MeetingsKey => _meetings.Key;
-        public static string ConnectKey => _connect.Key;
-        public static string AboutKey => _about.Key;
-
-        public static string Meetings => _meetings.Character.ToString();
-        public static string Connect => _connect.Character.ToString();
-        public static string About => _about.Character.ToString();
+        public static string FontFamily => "Font Awesome 5 Pro";
+        public static string FontName => "Font Awesome 5 Pro Regular";
+        public static string FontPath => "fa-regular-400.ttf";
     }
 
     public static class FontAwesomeBrands
