@@ -6,8 +6,8 @@ using MeetupApp.Controls;
 using Android.Content;
 using Xamarin.Forms.Platform.Android;
 using System.Collections.Generic;
-using Plugin.Iconize;
 using Xamarin.Forms.Platform.Android.AppCompat;
+using MeetupApp.Droid.Drawables;
 
 [assembly: ExportRenderer(typeof(IconBottomTabbedPage), typeof(IconBottomTabbedPageRenderer))]
 namespace MeetupApp.Droid.Renderers
@@ -66,11 +66,7 @@ namespace MeetupApp.Droid.Renderers
                 {
                     var iconKey = _icons[i];
 
-                    var icon = Iconize.FindIconForKey(iconKey);
-                    if (icon == null)
-                        continue;
-
-                    var drawable = new IconDrawable(Context, icon).Color(Color.White.ToAndroid()).SizeDp(20);
+                    var drawable = new IconDrawable(Context, iconKey).Color(Color.White.ToAndroid()).SizeDp(20);
 
                     menuItem.SetIcon(drawable);
                 }

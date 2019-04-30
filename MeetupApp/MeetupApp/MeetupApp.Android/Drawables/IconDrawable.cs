@@ -7,8 +7,9 @@ using Android.Support.V4.Content;
 using Android.Support.V4.Graphics.Drawable;
 using Android.Text;
 using Android.Util;
-using Plugin.Iconize;
 using R = Android.Resource;
+using MeetupApp.Fonts;
+using System.Collections.Generic;
 
 namespace MeetupApp.Droid.Drawables
 {
@@ -18,13 +19,14 @@ namespace MeetupApp.Droid.Drawables
     /// <seealso cref="Android.Graphics.Drawables.Drawable" />
     public class IconDrawable : Drawable, ITintAwareDrawable
     {
+        private static readonly Dictionary<string, Typeface> _fontCache = new Dictionary<string, Typeface>();
+
         /// <summary>
         /// The android actionbar icon size dp
         /// </summary>
         public const Int32 ANDROID_ACTIONBAR_ICON_SIZE_DP = 24;
-
+        private readonly char _iconChar;
         private readonly Context _context;
-        private readonly IIcon _icon;
         private readonly TextPaint _paint;
 
         private Int32 _alpha = 255;
@@ -51,25 +53,11 @@ namespace MeetupApp.Droid.Drawables
         /// <param name="iconKey">The icon key you want this drawable to display.</param>
         /// <exception cref="ArgumentException">If the key doesn't match any icon.</exception>
         public IconDrawable(Context context, String iconKey)
-            : this(context, Iconize.FindIconForKey(iconKey))
         {
-            // Intentionally left blank
-        }
+            if (FontAwesomeRegular.Items.TryGetValue(iconKey, out char iconChar)) return;
 
-        /// <summary>
-        /// Create an <see cref="IconDrawable" />.
-        /// </summary>
-        /// <param name="context">Your activity or application context.</param>
-        /// <param name="icon">The icon you want this drawable to display.</param>
-        public IconDrawable(Context context, IIcon icon)
-        {
-            var module = Iconize.FindModuleOf(icon);
-
-            if (module is null)
-                throw new Java.Lang.IllegalStateException($"Unable to find the module associated with icon {icon.Key}, have you registered the module you are trying to use with Iconize.With(...) in your Application?");
-
+            _iconChar = iconChar;
             _context = context;
-            _icon = icon;
 
             _paint = new TextPaint
             {
@@ -78,7 +66,7 @@ namespace MeetupApp.Droid.Drawables
                 UnderlineText = false
             };
             _paint.SetStyle(Paint.Style.Fill);
-            _paint.SetTypeface(module.ToTypeface(context));
+            _paint.SetTypeface(GetTypeface(context));
         }
 
         /// <summary>
@@ -121,8 +109,7 @@ namespace MeetupApp.Droid.Drawables
 
             _paint.TextSize = _size;
             var textBounds = new Rect();
-            var textValue = _icon.Character.ToString();
-            _paint.GetTextBounds(textValue, 0, 1, textBounds);
+            _paint.GetTextBounds(_iconChar.ToString(), 0, 1, textBounds);
 
             SetBounds(0, 0, textBounds.Width(), textBounds.Height());
             InvalidateSelf();
@@ -192,11 +179,10 @@ namespace MeetupApp.Droid.Drawables
             var height = bounds.Height();
             _paint.TextSize = _size;
             var textBounds = new Rect();
-            var textValue = _icon.Character.ToString();
-            _paint.GetTextBounds(textValue, 0, 1, textBounds);
+            _paint.GetTextBounds(_iconChar.ToString(), 0, 1, textBounds);
             var textHeight = textBounds.Height();
             var textBottom = bounds.Top + ((height - textHeight) / 2f) + textHeight - textBounds.Bottom;
-            canvas.DrawText(textValue, bounds.ExactCenterX(), textBottom, _paint);
+            canvas.DrawText(_iconChar.ToString(), bounds.ExactCenterX(), textBottom, _paint);
         }
 
         /// <inheritdoc />
@@ -267,6 +253,15 @@ namespace MeetupApp.Droid.Drawables
             }
 
             return false;
+        }
+
+        private Typeface GetTypeface(Context context)
+        {
+            if (!_fontCache.ContainsKey(FontAwesomeRegular.FontName))
+            {
+                _fontCache.Add(FontAwesomeRegular.FontName, Typeface.CreateFromAsset(context.Assets, FontAwesomeRegular.FontPath));
+            }
+            return _fontCache[FontAwesomeRegular.FontName];
         }
     }
 }

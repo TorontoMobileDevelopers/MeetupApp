@@ -1,7 +1,7 @@
-﻿using Plugin.Iconize;
+﻿using Xamarin.Forms;
 namespace MeetupApp.Controls
 {
-    public class IconBottomTabbedPage : IconTabbedPage
+    public class IconBottomTabbedPage : TabbedPage
     {
     }
 }
