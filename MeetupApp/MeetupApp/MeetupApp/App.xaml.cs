@@ -62,10 +62,4 @@ namespace MeetupApp
         public FontAwesomeProIconModule()
             : base("Font Awesome 5 Pro", "Font Awesome 5 Pro Regular", "fa-regular-400.ttf", FontAwesomeRegular.Items) {}
     }
-
-    public class FontAwesomeBrandsIconModule : IconModule
-    {
-        public FontAwesomeBrandsIconModule()
-            : base("Font Awesome 5 Brands", "Font Awesome 5 Brands Regular", "fa-brands-400.ttf", FontAwesomeBrands.Items) { }
-    }
 }

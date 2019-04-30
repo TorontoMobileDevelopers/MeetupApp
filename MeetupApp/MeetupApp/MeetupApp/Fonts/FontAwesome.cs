@@ -27,35 +27,11 @@ namespace MeetupApp.Fonts
 
     public static class FontAwesomeBrands
     {
-        private static IIcon _meetup = new Icon(nameof(Meetup), '\uf2e0');
-        private static IIcon _gitHub = new Icon(nameof(GitHub), '\uf09b');
-        private static IIcon _youTube = new Icon(nameof(YouTube), '\uf167');
-        private static IIcon _twitter = new Icon(nameof(Twitter), '\uf099');
-        private static IIcon _whatsApp = new Icon(nameof(WhatsApp), '\uf232');
-        private static IIcon _facebook = new Icon(nameof(Facebook), '\uf39e');
-
-        public static IList<IIcon> Items { get; } = new List<IIcon>
-        {
-            _meetup,
-            _gitHub,
-            _youTube,
-            _twitter,
-            _whatsApp,
-            _facebook,
-        };
-
-        public static string MeetupKey => _meetup.Key;
-        public static string GitHubKey => _gitHub.Key;
-        public static string YouTubeKey => _youTube.Key;
-        public static string TwitterKey => _twitter.Key;
-        public static string WhatsAppKey => _whatsApp.Key;
-        public static string FacebookKey => _facebook.Key;
-
-        public static string Meetup => _meetup.Character.ToString();
-        public static string GitHub => _gitHub.Character.ToString();
-        public static string YouTube => _youTube.Character.ToString();
-        public static string Twitter => _twitter.Character.ToString();
-        public static string WhatsApp => _whatsApp.Character.ToString();
-        public static string Facebook => _facebook.Character.ToString();
+        public static string Meetup => '\uf2e0'.ToString();
+        public static string GitHub => '\uf09b'.ToString();
+        public static string YouTube => '\uf167'.ToString();
+        public static string Twitter => '\uf099'.ToString();
+        public static string WhatsApp => '\uf232'.ToString();
+        public static string Facebook => '\uf39e'.ToString();
     }
 }
