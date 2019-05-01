@@ -25,7 +25,6 @@ namespace MeetupApp.Droid
 
         private void InitDependencies()
         {
-            Plugin.Iconize.Iconize.Init(Resource.Id.toolbar, Resource.Id.sliding_tabs);
         }
     }
 
