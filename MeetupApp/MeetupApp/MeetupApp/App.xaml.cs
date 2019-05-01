@@ -26,14 +26,23 @@ namespace MeetupApp
 
         protected override async void OnInitialized()
         {
-            InitializeComponent();
-            Barrel.ApplicationId = AppInfo.PackageName;
-            await NavigationService.NavigateAsync("MainPage");
+            try
+            {
+                InitializeComponent();
+                Barrel.ApplicationId = AppInfo.PackageName;
+                await NavigationService.NavigateAsync("AppShell");
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+                throw;
+            }
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
+            containerRegistry.RegisterForNavigation<AppShell>();
             containerRegistry.RegisterForNavigation<MainPage>();
             containerRegistry.RegisterForNavigation<MeetingsListPage>();
             containerRegistry.RegisterForNavigation<AboutPage>();

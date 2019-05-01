@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:MeetupApp.Views"
+       Route="meetup"
+       RouteHost="tomobiledev.com"
+       RouteScheme="http"
+       FlyoutBehavior="Disabled"
+       Title="Gastropods"
+       x:Class="MeetupApp.AppShell">
+    <ShellItem Shell.ShellTabBarTitleColor="White"
+               Shell.ShellTabBarUnselectedColor="White"
+               Shell.ShellTabBarBackgroundColor="#e0288d"
+               Shell.ShellBackgroundColor="#e0288d">
+        <ShellContent Title="Meetings">
+            <views:MeetingsListPage/>
+        </ShellContent>
+        <ShellContent Title="Connect">
+            <views:ConnectPage/>
+        </ShellContent>
+        <ShellContent Title="About">
+            <views:AboutPage/>
+        </ShellContent>
+    </ShellItem>
+</Shell>
