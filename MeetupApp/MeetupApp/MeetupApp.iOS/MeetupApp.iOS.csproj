@@ -115,6 +115,7 @@
     <BundleResource Include="Resources\Fonts\fa-regular-400.ttf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </BundleResource>
+    <Compile Include="Renderers\IconBottomTabbedPageRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Contents.json">
@@ -224,9 +225,6 @@
     </PackageReference>
     <PackageReference Include="Xamarin.Forms">
       <Version>4.0.1.383393-nightly</Version>
-    </PackageReference>
-    <PackageReference Include="Xam.Plugin.Iconize">
-      <Version>3.5.0.123</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

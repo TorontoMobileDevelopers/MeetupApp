@@ -4,11 +4,15 @@ namespace MeetupApp.Fonts
 {
     public static class FontAwesomeRegular
     {
+        public const string MeetingsKey = "Meetings";
+        public const string ConnectKey = "Connect";
+        public const string AboutKey = "About";
+
         public static IDictionary<string, char> Items { get; } = new Dictionary<string, char>
         {
-            { "Meetings", '\uf073'},
-            { "Connect", '\uf1e6'},
-            { "About", '\uf129'}
+            { MeetingsKey, '\uf073'},
+            { ConnectKey, '\uf1e6'},
+            { AboutKey, '\uf129'}
         };
 
         public static string FontFamily => "Font Awesome 5 Pro";
