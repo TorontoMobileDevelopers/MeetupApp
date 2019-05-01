@@ -44,8 +44,7 @@ namespace MeetupApp.Commands
 
                 if (Connectivity.NetworkAccess == NetworkAccess.Internet)
                 {
-                    //using (var client = new HttpClient())//new HttpTracerHandler()))
-                    using (var client = new HttpClient())
+                    using (var client = new HttpClient(new HttpTracerHandler()))
                     {
                         result = await client.GetStringAsync(url).ConfigureAwait(false);
                         events = await ParseFeed(result);
