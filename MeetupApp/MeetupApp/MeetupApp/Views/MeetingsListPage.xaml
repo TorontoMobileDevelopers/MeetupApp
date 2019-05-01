@@ -8,22 +8,20 @@
     <templates:ContentWithHeader>
         <StackLayout class="content">
             <Label Text="Upcoming Meetings" Margin="20" class="h2"/>
-            <ListView ItemsSource="{Binding RefreshCommand.EventList}"
-                      IsPullToRefreshEnabled="True"
-                      RefreshCommand="{Binding RefreshCommand}"
-                      IsRefreshing="{Binding RefreshCommand.IsRefreshing}"
-                      BackgroundColor="Transparent">
-                <ListView.ItemTemplate>
+            <CollectionView ItemsSource="{Binding RefreshCommand.EventList}"
+                      BackgroundColor="Transparent"
+                      SelectionChangedCommand="{Binding NavigateToWebUrlCommand}">
+                <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell Text="{Binding Title}" TextColor="White" />
+                        <Label Text="{Binding Title}" TextColor="White" />
                     </DataTemplate>
-                </ListView.ItemTemplate>
-                <ListView.Behaviors>
+                </CollectionView.ItemTemplate>
+                <!--<ListView.Behaviors>
                     <behaviors:EventToCommandBehavior EventName="ItemTapped"
                                                       Command="{Binding NavigateToWebUrlCommand}"
                                                       EventArgsParameterPath="Item" />
-                </ListView.Behaviors>
-            </ListView>
+                </ListView.Behaviors>-->
+            </CollectionView>
         </StackLayout>
     </templates:ContentWithHeader>
 </local:BasePage>

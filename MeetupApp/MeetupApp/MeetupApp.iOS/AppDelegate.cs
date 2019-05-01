@@ -2,7 +2,6 @@
 using Prism;
 using Prism.Ioc;
 using UIKit;
-using Xamarin.Forms;
 
 namespace MeetupApp.iOS
 {
@@ -21,8 +20,8 @@ namespace MeetupApp.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            Forms.SetFlags("Shell_Experimental");
-            Forms.Init();
+            global::Xamarin.Forms.Forms.SetFlags("Shell_Experimental", "Visual_Experimental", "CollectionView_Experimental", "FastRenderers_Experimental");
+            global::Xamarin.Forms.Forms.Init();
             //var bb = new IconImageRenderer();
             LoadApplication(new App(new iOSInitializer()));
 

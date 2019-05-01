@@ -6,6 +6,7 @@
        RouteHost="tomobiledev.com"
        RouteScheme="http"
        FlyoutBehavior="Disabled"
+       Visual="Material"
        Title="Gastropods"
        x:Class="MeetupApp.AppShell">
     <ShellItem Shell.ShellTabBarTitleColor="White"
