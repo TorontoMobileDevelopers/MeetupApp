@@ -9,7 +9,6 @@ using MeetupApp.Commands;
 using MeetupApp.Services;
 using MonkeyCache.SQLite;
 using Xamarin.Essentials;
-using MeetupApp.Fonts;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace MeetupApp
