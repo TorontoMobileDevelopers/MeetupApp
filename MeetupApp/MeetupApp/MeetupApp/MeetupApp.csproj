@@ -11,7 +11,7 @@
     <LangVersion>Latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Refractored.MvvmHelpers" Version="1.4.1-beta" />
     <PackageReference Include="HttpTracer" Version="2.0.1" />
     <PackageReference Include="Prism.Autofac.Forms" Version="7.1.0.431" />
